@@ -35,3 +35,29 @@
     }
   ]
 }
+
+  "routes": [
+    {
+      "src": "/endereco_lojas/new",
+      "dest": "/endereco_loja/new"
+    },
+    {
+      "src": "/endereco_lojas/create",
+      "methods": ["POST"],
+      "dest": "/endereco_lojas/create"
+    },
+    {
+      "src": "/endereco_lojas/:id",
+      "dest": "/endereco_lojas/:id"
+    },
+    {
+      "src": "/endereco_lojas/delete",
+      "methods": ["POST"],
+      "dest": "/endereco_lojas/delete"
+    },
+    {
+      "src": "/endereco_lojas",
+      "dest": "/endereco_lojas"
+    },
+  ]
+}
