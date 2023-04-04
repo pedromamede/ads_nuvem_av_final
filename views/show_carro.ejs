@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicle - Nuvem</title>
+    <style>
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .info {
+        max-width: 600px;
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      
+      .field {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+      
+      .field-label {
+        width: 150px;
+        font-weight: bold;
+      }
+      
+      .field-value {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <h1><%= nomeCrud %> ID: <%= objeto.objectId %></h1>
+      
+      <div class="field">
+        <div class="field-label">Nome:</div>
+        <div class="field-value"><%= objeto.nome %></div>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Preco:</div>
+        <div class="field-value"><%= objeto.preco %></div>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Cor:</div>
+        <div class="field-value"><%= objeto.cor %></div>
+      </div>
+    </div>
+
+    <h2><a href="/<%= nomeCrudPlural %>/">Voltar</a></h2>
+  </body>
+</html>

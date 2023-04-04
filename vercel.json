@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/carros/new",
+      "dest": "/carros/new"
+    },
+    {
+      "src": "/carros/create",
+      "methods": ["POST"],
+      "dest": "/carros/create"
+    },
+    {
+      "src": "/carros/:id",
+      "dest": "/carros/:id"
+    },
+    {
+      "src": "/carros/delete",
+      "methods": ["POST"],
+      "dest": "/carros/delete"
+    },
+    {
+      "src": "/carros",
+      "dest": "/carros"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+}

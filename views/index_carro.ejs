@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADS - Nuvem</title>
+    <style>
+      table {
+
+        width: 100%;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      
+      th {
+        background-color: #ddd;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      tr:hover {
+        background-color: #ddd;
+      }
+    </style>
+        
+    
+  </head>
+  <body>
+    <h1>Meus <%= nomeCrudPlural %></h1>
+    <h2> <a href="/<%= nomeCrudPlural %>/new/">Criar um <%= nomeCrud %></a></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preco</th>
+          <th>Cor</th>
+          <th>Acoes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% objetos.forEach(objeto => { %>
+          <tr>
+            <td><%= objeto.objectId %></td>
+            <td><%= objeto.nome %></td>
+            <td><%= objeto.preco %></td>
+            <td><%= objeto.cor %></td>
+            <td>
+              <div style='margin-bottom: 10px'>
+                <a href="/<%= nomeCrudPlural %>/<%=objeto.objectId %>">Visualizar</a>
+              </div>
+              <div style='margin-bottom: 10px'>
+                <a href="/<%= nomeCrudPlural %>/edit/<%=objeto.objectId %>">Atualizar</a>
+              </div>
+              <form method="POST" action="/<%= nomeCrudPlural %>/delete/" enctype="application/x-www-form-urlencoded">
+                <input type="hidden" name="id" value="<%=objeto.objectId%>">
+                <button type="submit">Excluir</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
