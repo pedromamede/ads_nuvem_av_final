@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicle - Nuvem</title>
+    <style>
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .info {
+        max-width: 600px;
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      
+      .field {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+      
+      .field-label {
+        width: 150px;
+        font-weight: bold;
+      }
+      
+      .field-value {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <h1><%= nomeCrud %> ID: <%= objeto.objectId %></h1>
+      
+      <div class="field">
+        <div class="field-label">Nome:</div>
+        <div class="field-value"><%= objeto.nome %></div>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Rua:</div>
+        <div class="field-value"><%= objeto.rua %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Numero:</div>
+        <div class="field-value"><%= objeto.numero %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Bairro:</div>
+        <div class="field-value"><%= objeto.bairro %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">CEP:</div>
+        <div class="field-value"><%= objeto.cep %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Cidade:</div>
+        <div class="field-value"><%= objeto.cidade %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Estado:</div>
+        <div class="field-value"><%= objeto.estado %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Telefone:</div>
+        <div class="field-value"><%= objeto.telefone %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Email:</div>
+        <div class="field-value"><%= objeto.email %></div>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">CPF:</div>
+        <div class="field-value"><%= objeto.cpf %></div>
+      </div>
+
+        <div class="field">
+        <div class="field-label">Nascimento:</div>
+        <div class="field-value"><%= objeto.nascimento %></div>
+      </div>
+    </div>
+
+    <h2><a href="/<%= nomeCrudPlural %>/">Voltar</a></h2>
+  </body>
+</html>

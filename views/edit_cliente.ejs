@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ads - Nuvem</title>
+    <style>
+      form {
+        max-width: 600px;
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+      
+      input[type="text"], input[type="number"], select {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      
+      button[type="submit"] {
+        display: block;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.2s ease-in-out;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Atualizar ID: <%= objeto.objectId %></h1>
+    <form method="post" action="/<%= nomeCrudPlural %>/update/<%= objeto.objectId %>" enctype="application/x-www-form-urlencoded">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" value="<%= objeto.nome %>" required >
+
+      <label for="preco">Rua:</label>
+      <input type="text" id="rua" name="rua" min="0" step="1" value="<%= objeto.rua %>" required>
+
+      <label for="cor">Numero:</label>
+      <input type="number" id="numero" name="numero" value="<%= objeto.numero %>" required>
+
+      <label for="nome">Bairro:</label>
+      <input type="text" id="bairro" name="bairro" value="<%= objeto.bairro %>" required >
+
+      <label for="nome">CEP:</label>
+      <input type="number" id="cep" name="cep" value="<%= objeto.cep %>" required >
+
+      <label for="nome">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" value="<%= objeto.cidade %>" required >
+
+      <label for="nome">Estado:</label>
+      <input type="text" id="estado" name="estado" value="<%= objeto.estado %>" required >
+
+      <label for="nome">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" value="<%= objeto.telefone %>" required >
+
+      <label for="nome">Email:</label>
+      <input type="text" id="email" name="email" value="<%= objeto.email %>" required >
+
+      <label for="nome">CPF:</label>
+      <input type="text" id="cpf" name="cpf" value="<%= objeto.cpf %>" required >
+
+      <label for="nome">Nascimento:</label>
+      <input type="text" id="nascimento" name="nascimento" value="<%= objeto.nascimento %>" required >
+
+      <button type="submit">Atualizar</button>
+    </form>
+  </body>
+</html>
