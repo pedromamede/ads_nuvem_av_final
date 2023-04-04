@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 app.use('/', baseRoute);
 app.use('/carros', carroRoute);
-app.use('/endereco_loja', endereco_lojaRoute);
+app.use('/endereco_lojas', endereco_lojaRoute);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
