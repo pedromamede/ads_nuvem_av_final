@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use('/', baseRoute);
 app.use('/carros', carroRoute);
 app.use('/endereco_lojas', endereco_lojaRoute);
-app.use('/clientes', cadastro_clienteRoute);
+app.use('/clientes', clienteRoute);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

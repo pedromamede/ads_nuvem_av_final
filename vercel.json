@@ -53,6 +53,30 @@
 		{
 			"src": "/endereco_lojas",
 			"dest": "/endereco_lojas"
+		},
+
+    
+    {
+			"src": "/clientes/new",
+			"dest": "/clientes/new"
+		},
+		{
+			"src": "/clientes/create",
+			"methods": ["POST"],
+			"dest": "/clientes/create"
+		},
+		{
+			"src": "/clientes/:id",
+			"dest": "/clientes/:id"
+		},
+		{
+			"src": "/clientes/delete",
+			"methods": ["POST"],
+			"dest": "/clientes/delete"
+		},
+		{
+			"src": "/clientes",
+			"dest": "/clientes"
 		}
 
 	]
