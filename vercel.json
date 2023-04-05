@@ -30,8 +30,6 @@
 			"src": "/(.*)",
 			"dest": "/"
 		},
-
-
 		{
 			"src": "/endereco_lojas/new",
 			"dest": "/endereco_loja/new"
@@ -54,8 +52,6 @@
 			"src": "/endereco_lojas",
 			"dest": "/endereco_lojas"
 		},
-
-    
     {
 			"src": "/clientes/new",
 			"dest": "/clientes/new"
@@ -77,9 +73,7 @@
 		{
 			"src": "/clientes",
 			"dest": "/clientes"
-		}
-
-
+		},
     {
 			"src": "/vendas/new",
 			"dest": "/vendas/new"
@@ -102,6 +96,5 @@
 			"src": "/vendas",
 			"dest": "/vendas"
 		}
-
 	]
 }
