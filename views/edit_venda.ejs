@@ -45,18 +45,18 @@
     </style>
   </head>
   <body>
-    <h1>Criar novo <%= nomeCrud %></h1>
-    <form method="post" action="/<%= nomeCrudPlural %>/create/" enctype="application/x-www-form-urlencoded">
+    <h1>Atualizar ID: <%= objeto.objectId %></h1>
+    <form method="post" action="/<%= nomeCrudPlural %>/update/<%= objeto.objectId %>" enctype="application/x-www-form-urlencoded">
       <label for="data">Data:</label>
-      <input type="text" id="data" name="data" required>
+      <input type="text" id="data" name="data" value="<%= objeto.data %>" required >
 
       <label for="vendedor">Vendedor:</label>
-      <input type="text" id="vendedor" name="vendedor" min="0" step="1" required>
+      <input type="text" id="vendedor" name="vendedor" min="0" step="1" value="<%= objeto.vendedor %>" required>
 
       <label for="carro">Carro:</label>
-      <input type="text" id="carro" name="carro" required>
+      <input type="text" id="carro" name="carro" value="<%= objeto.carro %>" required>
 
-      <button type="submit">Criar</button>
+      <button type="submit">Atualizar</button>
     </form>
   </body>
 </html>
