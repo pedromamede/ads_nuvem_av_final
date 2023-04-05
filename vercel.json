@@ -79,5 +79,29 @@
 			"dest": "/clientes"
 		}
 
+
+    {
+			"src": "/vendas/new",
+			"dest": "/vendas/new"
+		},
+		{
+			"src": "/vendas/create",
+			"methods": ["POST"],
+			"dest": "/vendas/create"
+		},
+		{
+			"src": "/vendas/:id",
+			"dest": "/vendas/:id"
+		},
+		{
+			"src": "/vendas/delete",
+			"methods": ["POST"],
+			"dest": "/vendas/delete"
+		},
+		{
+			"src": "/vendas",
+			"dest": "/vendas"
+		}
+
 	]
 }
